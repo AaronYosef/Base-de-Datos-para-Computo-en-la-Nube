@@ -1,5 +1,5 @@
 
-**Mostrar bases de datos y usar una base de datos**
+### **Mostrar bases de datos y usar una base de datos**
 
 show dbs;
 use dbs (Nombre base de datos);
