@@ -1,6 +1,6 @@
 # ***Mostrar bases de datos y usar una base de datos***
 ## Estas líneas de código muestran todas las bases de datos disponibles y seleccionan una base de datos específica para usarla.
-* show dbs; *
+* show dbs; 
 * use dbs (Nombre base de datos); 
 
 # ***Crear y mostrar colecciones***
