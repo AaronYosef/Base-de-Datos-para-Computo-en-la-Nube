@@ -1,3 +1,4 @@
+<span style="color:red;">Texto rojo</span>
 
 ### Mostrar bases de datos y usar una base de datos
 
