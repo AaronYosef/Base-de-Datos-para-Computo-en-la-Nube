@@ -1,10 +1,10 @@
 # ***Mostrar bases de datos y usar una base de datos***
-## Estas líneas de código muestran todas las bases de datos disponibles y seleccionan una base de datos específica para usarla.
+## Estos comandos muestran todas las bases de datos disponibles y seleccionan una base de datos específica para usarla.
 * show dbs; 
 * use dbs (Nombre base de datos); 
 
 # ***Crear y mostrar colecciones***
-## Estas líneas de código crean una nueva colección en la base de datos actual y muestran todas las colecciones existentes en la base de datos actual.
+## Estos comandos crean una nueva colección en la base de datos actual y muestran todas las colecciones existentes en la base de datos actual.
 * db.createCollection();
 * show Collections;
 
@@ -13,7 +13,7 @@
 * db.empleado.insertOne({nombre:'ramon',edad:'Lopez'});
 
 # ***Encontrar documentos en una colección***
-## Esta línea de código encuentra todos los documentos en la colección "empleado" y los muestra.
+## Este comando encuentra todos los documentos en la colección "empleado" y los muestra.
 * db.empleado.find(); 
 
 # ***Borrar una base de datos***
@@ -26,7 +26,7 @@
 * db.empleado.insertMany([...]);
 
 # ***Crear y mostrar colecciones con datos adicionales***
-## Estas líneas de código crean una colección llamada "facturas" y luego insertan un documento en ella.
+## Estos comandos crean una colección llamada "facturas" y luego insertan un documento en ella.
 * db.createCollection("facturas");
 * db.facturas.insertOne({...});
 
