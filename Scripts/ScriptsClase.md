@@ -5,7 +5,7 @@
 
 # ***Crear y mostrar colecciones***
 ## Estos comandos crean una nueva colección en la base de datos actual y muestran todas las colecciones existentes en la base de datos actual.
-* db.createCollection();
+* db.createCollection(Nombre de la collecion);
 * show Collections;
 
 # ***Insertar documentos en una colección***
