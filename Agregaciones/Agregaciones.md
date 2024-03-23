@@ -4,7 +4,7 @@
     * Filtra los documentos con la editorial "Biblio".
 * $project:
     * Proyecta los campos especificados, omitiendo el campo "id" y mostrando el título, el precio y el nombre de la editorial.
-
+´´´
 [
 {
 $match:
@@ -23,7 +23,7 @@ NombreEditorial: "$editorial",
 },
 },
 ];
-
+´´´
 # ***Agregación Group Sort***
 ## Este conjunto de comandos realiza una agregación en la colección, agrupando por editorial y contando el número de documentos, luego ordenando por el número de documentos de manera ascendente.
 * $group:
