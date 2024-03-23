@@ -1,9 +1,9 @@
 # ***Agregación Match y Project***
 ## Este conjunto de comandos realiza una agregación en la colección, primero filtrando los documentos con la editorial "Biblio" y luego proyectando solo los campos específicos.
 * $match:
-    * Filtra los documentos con la editorial "Biblio".
+    > * Filtra los documentos con la editorial "Biblio".
 * $project:
-    * Proyecta los campos especificados, omitiendo el campo "id" y mostrando el título, el precio y el nombre de la editorial.
+   > * Proyecta los campos especificados, omitiendo el campo "id" y mostrando el título,  el precio y el nombre de la editorial.
 ``` mongosh
 [
 {
