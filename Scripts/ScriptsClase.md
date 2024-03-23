@@ -1,3 +1,21 @@
+# ***Codigos de la clase***
+## Operaciones de lectura, escritura, actualización y eliminación de datos. 
+
+| Operación                      | Descripción                                                                                   |
+|--------------------------------|-----------------------------------------------------------------------------------------------|
+| `db.collection.find()`         | Consulta documentos en una colección según un criterio especificado.                          |
+| `db.collection.findOne()`      | Consulta y devuelve un solo documento que cumple con los criterios especificados.             |
+| `db.collection.insertOne()`    | Inserta un solo documento en la colección.                                                    |
+| `db.collection.insertMany()`   | Inserta múltiples documentos en la colección.                                                  |
+| `db.collection.updateOne()`    | Actualiza un solo documento que cumple con los criterios especificados.                        |
+| `db.collection.updateMany()`   | Actualiza múltiples documentos que cumplen con los criterios especificados.                   |
+| `db.collection.replaceOne()`   | Reemplaza un solo documento que cumple con los criterios especificados.                        |
+| `db.collection.deleteOne()`    | Elimina un solo documento que cumple con los criterios especificados.                          |
+| `db.collection.deleteMany()`   | Elimina múltiples documentos que cumplen con los criterios especificados.                      |
+| `db.collection.aggregate()`    | Realiza operaciones de agregación en los datos, como agrupamiento, filtrado y transformación.  |
+| `db.collection.distinct()`     | Devuelve un conjunto de valores distintos para un campo específico.                             |
+| `db.collection.countDocuments()`| Cuenta los documentos que cumplen con los criterios especificados.                             |
+
 # ***Mostrar bases de datos y usar una base de datos***
 ## Estos comandos muestran todas las bases de datos disponibles y seleccionan una base de datos específica para usarla.
 ``` mongosh
@@ -87,3 +105,58 @@
 | `$regex`               | Coincide con expresiones regulares en un campo                                                 |
 | `$elemMatch`           | Selecciona documentos que contienen al menos un elemento que cumple una consulta específica    |
 | `$size`                | Comprueba el tamaño de un array                                                               |
+
+# ***Operadores  aritméticos***
+## Se utilizan dentro de las consultas de la base de datos para realizar operaciones matemáticas en los valores de los campos.
+
+* Suma:
+### $add: Agrega valores.
+``` mongosh
+db.productos.updateMany(
+   { },
+   { $set: { precio: { $add: ["$precio", 5] } } }
+)
+``` 
+* Resta:
+### $subtract: Resta valores.
+``` mongosh
+db.transacciones.aggregate([
+   {
+      $project: {
+         _id: 1,
+         monto: 1,
+         saldoFinal: { $subtract: ["$monto", 100] }
+      }
+   }
+])
+``` 
+* Multiplicación:
+### $multiply: Multiplica valores.
+``` mongosh
+db.ventas.aggregate([
+   {
+      $project: {
+         _id: 1,
+         producto: 1,
+         totalVentas: { $multiply: ["$precio", "$cantidadVendida"] }
+      }
+   }
+])
+``` 
+* División:
+### $divide: Divide valores.
+``` mongosh
+db.empleados.aggregate([
+   {
+      $group: {
+         _id: null,
+         salarioPromedio: { $avg: "$salario" }
+      }
+   }
+])
+```
+* Resto de la división:
+### $mod: Devuelve el resto de la división.
+``` mongosh
+db.numeros.find({ $expr: { $mod: [ "$numero", 2 ] } })
+``` 
