@@ -66,3 +66,24 @@
 * db.ejemplo.drop();
 * db.dropDatabase();
 ``` 
+
+# ***Operadores en Mongo***
+
+| Operador               | Descripción                                                                                   |
+|------------------------|-----------------------------------------------------------------------------------------------|
+| `$eq`                  | Igual a                                                                                       |
+| `$ne`                  | No igual a                                                                                    |
+| `$gt`                  | Mayor que                                                                                     |
+| `$gte`                 | Mayor o igual que                                                                             |
+| `$lt`                  | Menor que                                                                                     |
+| `$lte`                 | Menor o igual que                                                                             |
+| `$in`                  | Pertenece a un conjunto de valores                                                            |
+| `$nin`                 | No pertenece a un conjunto de valores                                                         |
+| `$and`                 | Operador lógico AND                                                                           |
+| `$or`                  | Operador lógico OR                                                                            |
+| `$not`                 | Operador lógico NOT                                                                           |
+| `$exists`              | Comprueba si un campo existe en un documento                                                  |
+| `$type`                | Comprueba el tipo de un campo                                                                 |
+| `$regex`               | Coincide con expresiones regulares en un campo                                                 |
+| `$elemMatch`           | Selecciona documentos que contienen al menos un elemento que cumple una consulta específica    |
+| `$size`                | Comprueba el tamaño de un array                                                               |
