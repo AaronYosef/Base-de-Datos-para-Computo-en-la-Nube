@@ -109,16 +109,16 @@
 # ***Operadores  aritméticos***
 ## Se utilizan dentro de las consultas de la base de datos para realizar operaciones matemáticas en los valores de los campos.
 
-* Suma:
-### $add: Agrega valores.
+### Suma:
+>* $add: Agrega valores.
 ``` mongosh
 db.productos.updateMany(
    { },
    { $set: { precio: { $add: ["$precio", 5] } } }
 )
 ``` 
-* Resta:
-### $subtract: Resta valores.
+### Resta:
+>* $subtract: Resta valores.
 ``` mongosh
 db.transacciones.aggregate([
    {
@@ -130,8 +130,8 @@ db.transacciones.aggregate([
    }
 ])
 ``` 
-* Multiplicación:
-### $multiply: Multiplica valores.
+### Multiplicación:
+>* $multiply: Multiplica valores.
 ``` mongosh
 db.ventas.aggregate([
    {
@@ -143,8 +143,8 @@ db.ventas.aggregate([
    }
 ])
 ``` 
-* División:
-### $divide: Divide valores.
+### División:
+>* $divide: Divide valores.
 ``` mongosh
 db.empleados.aggregate([
    {
@@ -155,8 +155,8 @@ db.empleados.aggregate([
    }
 ])
 ```
-* Resto de la división:
-### $mod: Devuelve el resto de la división.
+### Resto de la división:
+>* $mod: Devuelve el resto de la división.
 ``` mongosh
 db.numeros.find({ $expr: { $mod: [ "$numero", 2 ] } })
 ``` 
