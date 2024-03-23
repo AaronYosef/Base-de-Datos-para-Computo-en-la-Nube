@@ -5,7 +5,7 @@
 * use practica1;
 ``` 
 ### Resultado:
-![Imagen 1](imagenes/Cap1.png)
+![Imagen 1](https://cinecity.space/Imagenes/Cap1.png)
 
 # ***Crear y mostrar colecciones***
 ## Estos comandos crean una nueva colección en la base de datos actual y muestran todas las colecciones existentes en la base de datos actual.
