@@ -1,9 +1,9 @@
 # ***Agregación Match y Project***
 ## Este conjunto de comandos realiza una agregación en la colección, primero filtrando los documentos con la editorial "Biblio" y luego proyectando solo los campos específicos.
 * $match:
-   `#0969DA` > * Filtra los documentos con la editorial "Biblio".
+ > * Filtra los documentos con la editorial "Biblio".
 * $project:
-  `#0969DA` > * Proyecta los campos especificados, omitiendo el campo "id" y mostrando el título,  el precio y el nombre de la editorial.
+ > * Proyecta los campos especificados, omitiendo el campo "id" y mostrando el título,  el precio y el nombre de la editorial.
 ``` mongosh
 [
 {
@@ -27,10 +27,10 @@ NombreEditorial: "$editorial",
 # ***Agregación Group Sort***
 ## Este conjunto de comandos realiza una agregación en la colección, agrupando por editorial y contando el número de documentos, luego ordenando por el número de documentos de manera ascendente.
 * $group:
-    * Agrupa los documentos por editorial y cuenta el número de documentos.
+   > * Agrupa los documentos por editorial y cuenta el número de documentos.
 * $sort:
-    * Ordena los resultados por el número de documentos en orden ascendente.
-
+   > * Ordena los resultados por el número de documentos en orden ascendente.
+``` mongosh
 [{
 $group:
 {
@@ -46,16 +46,16 @@ $sort:
 },
 },
 ];
-
+``` 
 # ***Match, Project y Sort***
 ## Este conjunto de comandos realiza una agregación en la colección, primero filtrando los documentos con la editorial "Biblio", luego proyectando campos específicos y calculando la ganancia total por documento, y finalmente ordenando por el precio de manera ascendente.
 * $match:
-    * Filtra los documentos con la editorial "Biblio".
+   > * Filtra los documentos con la editorial "Biblio".
 * $project:
-    * Proyecta los campos especificados y calcula la ganancia total.
+   > * Proyecta los campos especificados y calcula la ganancia total.
 * $sort:
-    * Ordena los resultados por el precio en orden ascendente.
-
+   > * Ordena los resultados por el precio en orden ascendente.
+``` mongosh
 [
   {
     $match: {
@@ -80,14 +80,14 @@ $sort:
     }
   }
 ]
-
+``` 
 # ***Maximum Group***
 ## Este conjunto de comandos realiza una agregación en la colección, agrupando por editorial y calculando el número de documentos, el precio promedio y el precio máximo, luego ordena por el precio máximo de manera ascendente.
 * $group:
-    * Agrupa los documentos por editorial y calcula el número de documentos, el precio promedio y el precio máximo.
+   > * Agrupa los documentos por editorial y calcula el número de documentos, el precio promedio y el precio máximo.
 * $sort:
-    * Ordena los resultados por el precio máximo en orden ascendente.
-
+   > * Ordena los resultados por el precio máximo en orden ascendente.
+``` mongosh
 [
   {
     $group: {
@@ -109,14 +109,14 @@ $sort:
     }
   }
 ]
-
+``` 
 # ***Set Out***
 ## Este conjunto de comandos realiza una agregación en la colección, agrupando por editorial y calculando el número de documentos y el precio promedio, luego redondea la media y guarda los resultados en una nueva colección llamada "Media_Editoriales".
 * $set:
-    * Redondea la media a dos decimales.
+   > * Redondea la media a dos decimales.
 * $out:
-    * Guarda los resultados en una nueva colección llamada "Media_Editoriales".
-
+   > * Guarda los resultados en una nueva colección llamada "Media_Editoriales".
+``` mongosh
 [
   {
     $group: {
@@ -140,12 +140,12 @@ $sort:
     $out: "Media_Editoriales"
   }
 ]
-
+``` 
 # ***Set Unset***
 ## Este conjunto de comandos realiza una agregación en la colección, agrupando por editorial y calculando el número de documentos y el precio promedio, luego elimina el campo "media" del resultado final.
 * $unset:
-    * Elimina el campo "media" del resultado final.
-
+   > * Elimina el campo "media" del resultado final.
+``` mongosh
 [
   {
     $group: {
@@ -169,3 +169,4 @@ $sort:
     $unset: "media"
   }
 ]
+``` 
