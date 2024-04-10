@@ -14,6 +14,7 @@ db.productos.count({ tipo: "medio" })
 ``` mongosh
  db.productos.distinct("fabricante")
 ```
+![Imagen 2](https://cinecity.space/Imagenes/Captura2.jpeg)
 ## 3. Usando aggregate, visualizar los productos que tengan más de 80 unidades
 ### Código
 ``` mongosh
@@ -22,7 +23,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 2](https://cinecity.space/Imagenes/Captura2.jpeg)
+![Imagen 3](https://cinecity.space/Imagenes/Captura3.jpeg)
 
 ## 4. Con $project visualizar solo el nombre, unidades y precio de los productos que tengan menos de 10 unidades.
 ### Código
@@ -33,7 +34,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 3](https://cinecity.space/Imagenes/Captura3.jpeg)
+![Imagen 4](https://cinecity.space/Imagenes/Captura4.jpeg)
 
 ## 5. Con $project ponemos el fabricante, pero le cambiamos el nombre por “empresa”.
 ### Código
@@ -44,7 +45,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 4](https://cinecity.space/Imagenes/Captura4.jpeg)
+![Imagen 5](https://cinecity.space/Imagenes/Captura5.jpeg)
 
 ## 6. Añadir a la consulta anterior un campo calculado que se llame total y que multiplique precio por unidades.
 ### Código
@@ -55,7 +56,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 5](https://cinecity.space/Imagenes/Captura5.jpeg)
+![Imagen 6](https://cinecity.space/Imagenes/Captura6.jpeg)
 
 ## 7. Hacer que el nombre salga en mayúsculas con el operador $toUpper.
 ### Código
@@ -65,7 +66,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 6](https://cinecity.space/Imagenes/Captura6.jpeg)
+![Imagen 7](https://cinecity.space/Imagenes/Captura7.jpeg)
 
 ## 8. Añadir un campo calculado que ponga el nombre del producto y el tipo concatenado con el operador $concat. Le llamamos al campo “completo”.
 ### Código
@@ -75,7 +76,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 7](https://cinecity.space/Imagenes/Captura7.jpeg)
+![Imagen 8](https://cinecity.space/Imagenes/Captura8.jpeg)
 
 ## 9. Ordena el resultado por el campo “total”.
 ### Código
@@ -85,7 +86,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 8](https://cinecity.space/Imagenes/Captura8.jpeg)
+![Imagen 9](https://cinecity.space/Imagenes/Captura9.jpeg)
 
 ## 10. Haciendo una nueva consulta, averiguar el numero de productos por tipo de producto.
 ### Código
@@ -95,7 +96,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 9](https://cinecity.space/Imagenes/Captura9.jpeg)
+![Imagen 10](https://cinecity.space/Imagenes/Captura10.jpeg)
 
 ## 11. Añadir el valor mayor y el menor.
 ### Código
@@ -105,7 +106,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 10](https://cinecity.space/Imagenes/Captura10.jpeg)
+![Imagen 11](https://cinecity.space/Imagenes/Captura11.jpeg)
 
 ## 12. Añade el total de unidades por cada tipo.
 ### Código
@@ -115,7 +116,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 11](https://cinecity.space/Imagenes/Captura11.jpeg)
+![Imagen 12](https://cinecity.space/Imagenes/Captura12.jpeg)
 
 ## 13. Con el operador $set y el operador “$substr” visualiza todos los datos del producto "Small Metal Tuna" y los primeros 5 caracteres del nombre.
 ### Código
@@ -126,7 +127,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 12](https://cinecity.space/Imagenes/Captura12.jpeg)
+![Imagen 13](https://cinecity.space/Imagenes/Captura13.jpeg)
 
 ## 14. Creamos una salida que tenga el nombre del articulo y el total (precio por unidades) y lo guardamos en una colección denominada productos2.
 ### Código
@@ -137,7 +138,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 13](https://cinecity.space/Imagenes/Captura13.jpeg)
+![Imagen 14](https://cinecity.space/Imagenes/Captura14.jpeg)
 
 ## 15. Creamos una salida que tenga el nombre del articulo y el total (precio por unidades) y lo guardamos en una colección denominada productos2.
 ### Código
@@ -148,7 +149,7 @@ db.productos.aggregate([
 ])
 ```
 ### Salida
-![Imagen 14](https://cinecity.space/Imagenes/Captura14.jpeg)
+![Imagen 15](https://cinecity.space/Imagenes/Captura15.jpeg)
 
 ## 16. Comprobamos que se ha creado.
 ## 17. Hacemos un find para comprobar el resultado.
@@ -157,4 +158,4 @@ db.productos.aggregate([
 db.productos2.find()
 ```
 ### Salida
-![Imagen 15](https://cinecity.space/Imagenes/Captura15.jpeg)
+![Imagen 16](https://cinecity.space/Imagenes/Captura16.jpeg)
