@@ -93,4 +93,4 @@ REFERENCES dbo.Dates (DateKey);
 GO 
 ```
 ## Diagrama 
-![Imagen 1](https://cinecity.space/Imagenes/diagrama.jpeg)
+![Imagen 1](https://cinecity.space/Imagenes/Diagrama.jpeg)
