@@ -5,7 +5,7 @@
 ### Brisa Adriana Mendoza Vigueras
 
 # Documentación
-## Creación de la Base de Datos´
+## Creación de la Base de Datos
 ``` sql
 create database datamartventas;
 use datamartventas;
@@ -77,19 +77,95 @@ constraint fk_fact_proveedor foreign key (sk_Proveedor) references DimProveedor,
 constraint fk_fact_producto foreign key (sk_Producto) references DimProducts,
 constraint fk_fact_empleado foreign key (sk_Empleado) references DimEmployees,
 constraint fk_fact_timeid foreign key (sk_TimeId) references DimTiempo,
-);
+)
 ```
 ## Visualización del Diagrama
-![alt text](Arqui.jpeg); 
+![alt text](img/Diagrama.jpeg)
 
-# Llenar el Datawarehouse con un ETL 
+# Datawarehouse con un ETL 
 
 ## Arquitectura del flujo de control
-![alt text](Arqui.jpeg); 
+![alt text](img/Arqui.jpeg)
 
-### Arquitectura de flujo de datos en Products
+## Arquitectura de flujo de datos en Products
+![alt text](img/ArquiProducts.jpeg)
+##  Orígenes 
+### Northwind
+![alt text](img/OrigenNProducts.jpeg)
+### Datamartventas
+![alt text](img/OrigenDProducts.jpeg)
+## Destino
+### Datamartventas
+![alt text](img/DestinoDProducts.jpeg)
 
-#### Orígenes 
+## Arquitectura de flujo de datos en Cliente
+![alt text](img/ArquiClientes.jpeg)
+## Orígenes 
+### Northwind
+![alt text](img/OrigenNCliente.jpeg) 
+### Datamartventas
+![alt text](img/OrigenDCliente.jpeg) 
+## Destino
+### Datamartventas
+![alt text](img/DestinoDCliente.jpeg)
 
-#### Destino
+## Arquitectura de flujo de datos en Proveedor
+![alt text](img/ArquiProveedor.jpeg)
+## Orígenes 
+### Northwind
+![alt text](img/OrigenNProveedor.jpeg)
+### Datamartventas
+![alt text](img/OrigenDProveedor.jpeg)
+## Destino
+### Datamartventas
+![alt text](img/DestinoNProveedor.jpeg)
+
+## Arquitectura de flujo de datos en Empleado
+![alt text](img/ArquiEmpleados.jpeg)
+## Orígenes 
+### Northwind
+![alt text](img/OrigenNEmpleados.jpeg) 
+### Datamartventas
+![alt text](img/OrigenDEmpleados.jpeg)
+## Destino
+### Datamartventas
+![alt text](img/DestinoDEmpleados.jpeg) 
+
+## Arquitectura de flujo de datos en Tiempo
+![alt text](img/ArquiTiempo.jpeg) 
+## Orígenes 
+### Northwind
+![alt text](img/OrigenNTiempo.jpeg) 
+### Datamartventas
+![alt text](img/OrigenDTiempo.jpeg)
+## Destino
+### Datamartventas
+![alt text](img/DestinoDTiempo.jpeg)
+
+
+## Tarea Ejecutar SQL
+![alt text](img/TareaSQL.jpeg) 
+## Arquitectura de flujo de datos en FactVentas
+![alt text](img/A1.jpeg)
+ ![alt text](img/A2.jpeg)
+ ![alt text](img/A3.jpeg)
+ ![alt text](img/A4.jpeg)
+ ![alt text](img/A5.jpeg)
+ ![alt text](img/A6.jpeg)
+## Orígenes 
+### Northwind
+![alt text](img/OrigenNOrderD.jpeg) 
+![alt text](img/OrigenNOrderD.jpeg)
+![alt text](img/Origen-NProducts.jpeg)
+![alt text](img/OrigenNInner.jpeg)
+
+### Datamartventas
+![alt text](img/Origen-DCliente.jpeg)
+![alt text](img/Origen-DTiempo.jpeg)
+![alt text](img/Origen-DProveedor.jpeg)
+![alt text](img/Origen-DProducts.jpeg)
+![alt text](img/OrigenDEmployees.jpeg)
+## Destino
+### Datamartventas
+![alt text](img/DestinoDFactVentas.jpeg)
 
