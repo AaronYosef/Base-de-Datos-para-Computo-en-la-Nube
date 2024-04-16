@@ -101,7 +101,7 @@ select UnitPrice,Quantity, (UnitPrice*Quantity)as importe from Northwind.dbo.[Or
 ```
 ### EL DIAGRAMA SE VISUALIZARA DE LA SIGUIENTE MANERA 
 
-![alt text](image-1.png);
+![alt text](img/image-1.png);
 
 # SE LLENA EL DATAWERHAOSE MEDIANTE UN ETL EN SSIS
 Esta es la arquitectura:
