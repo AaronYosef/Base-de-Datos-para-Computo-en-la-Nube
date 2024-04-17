@@ -85,7 +85,8 @@ constraint fk_fact_timeid foreign key (sk_TimeId) references DimTiempo,
 # Datawarehouse con un ETL 
 
 ## Arquitectura del flujo de control
-![alt text](img/BD.jpeg)
+![alt text](img/Control.jpeg)
+![alt text](img/control2.jpeg)
 
 ## Arquitectura de flujo de datos en Products
 ![alt text](img/ArquiProducts.jpeg)
@@ -142,12 +143,12 @@ constraint fk_fact_timeid foreign key (sk_TimeId) references DimTiempo,
 ### Datamartventas
 ![alt text](img/DestinoDTiempo.jpeg)
 
-
 ## Arquitectura de flujo de datos en FactVentas
 ![alt text](img/Ecompleto.jpeg)
-![alt text](img/E1.jpeg)
-![alt text](img/E2.jpeg)
-![alt text](img/E3.jpeg)
+![alt text](img/fa2.jpeg)
+![alt text](img/fa3.jpeg)
+![alt text](img/fa4.jpeg)
+![alt text](img/fa5.jpeg)
 
 ## Orígenes 
 ### Northwind
@@ -165,4 +166,19 @@ constraint fk_fact_timeid foreign key (sk_TimeId) references DimTiempo,
 ## Destino
 ### Datamartventas
 ![alt text](img/DestinoDFactVentas.jpeg)
+
+# Jobs en SQL
+
+### Primero debemos crear un catálogo SSIS. Una vez realizado esto, verificamos que nuestra solución este funcionando correctamente. VA a generar un reporte como el siguiente si todo esta hecho correctamente.
+![alt text](img/jo1.jpeg)
+![alt text](img/jo2.jpeg)
+![alt text](img/jo3.jpeg)
+### Agregamos un nuevo JOB y configuras el STEPS
+![alt text](img/jo4.jpeg)
+### Establecemos el horario en el que el JOB se empiece a ejecutar 
+![alt text](img/jo5.jpeg)
+### Ejecutamos el ETL
+* Nota:Debemos de implementar el paquete desde Visual Studio
+![alt text](img/Arqui.jpeg)
+
 
