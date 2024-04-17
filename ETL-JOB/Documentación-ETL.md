@@ -85,7 +85,7 @@ constraint fk_fact_timeid foreign key (sk_TimeId) references DimTiempo,
 # Datawarehouse con un ETL 
 
 ## Arquitectura del flujo de control
-![alt text](img/Arqui.jpeg)
+![alt text](img/BD.jpeg)
 
 ## Arquitectura de flujo de datos en Products
 ![alt text](img/ArquiProducts.jpeg)
@@ -143,8 +143,6 @@ constraint fk_fact_timeid foreign key (sk_TimeId) references DimTiempo,
 ![alt text](img/DestinoDTiempo.jpeg)
 
 
-## Tarea Ejecutar SQL
-![alt text](img/TareaSQL.jpeg) 
 ## Arquitectura de flujo de datos en FactVentas
 ![alt text](img/Ecompleto.jpeg)
 ![alt text](img/E1.jpeg)
