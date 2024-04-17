@@ -146,12 +146,11 @@ constraint fk_fact_timeid foreign key (sk_TimeId) references DimTiempo,
 ## Tarea Ejecutar SQL
 ![alt text](img/TareaSQL.jpeg) 
 ## Arquitectura de flujo de datos en FactVentas
-![alt text](img/A1.jpeg)
- ![alt text](img/A2.jpeg)
- ![alt text](img/A3.jpeg)
- ![alt text](img/A4.jpeg)
- ![alt text](img/A5.jpeg)
- ![alt text](img/A6.jpeg)
+![alt text](img/Ecompleto.jpeg)
+![alt text](img/E1.jpeg)
+![alt text](img/E2.jpeg)
+![alt text](img/E3.jpeg)
+
 ## Orígenes 
 ### Northwind
 ![alt text](img/OrigenNOrderD.jpeg) 
